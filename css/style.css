@@ -1,0 +1,91 @@
+html {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'open sans';
+
+  background: #FF8008;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+article {
+  width: 800px;
+  max-width: 90%
+}
+
+h1 {
+  text-align: center;
+}
+
+#progress {
+  width: 100%;
+  height: 2em;
+  position: relative;
+  background: white;
+
+  border-color: rgba(255, 255, 255, 0.7);
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 6px;
+}
+
+#completed, #average, #percentage-container {
+  box-sizing: border-box;
+  height: 100%;
+  position: absolute;
+}
+
+#completed, #average, #completed {
+  border-radius: 3px;
+}
+
+#average {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+}
+
+#percentage-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes progress-bar {
+  from {
+    background-position: 0 center;
+  }
+
+  to {
+    background-position: 2em center;
+  }
+}
+
+#completed {
+  background: #38f932;
+  background-image: url('../img/diagonal.svg');
+  background-repeat: repeat;
+  animation: progress-bar 1s infinite;
+  animation-timing-function: linear;
+
+  /*background-size: 100% 100%;*/
+
+}
+

@@ -1,0 +1,31 @@
+---
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8' />
+  <title>Baby Slabbers</title>
+  <link rel='shortcut icon' type='image/png' href='ico.png' />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/moment.min.js"></script>
+  <script src="js/d3.v4.min.js"></script>
+</head>
+<body>
+  <article>
+    <h1>Baby loading…<h1>
+    <div id="progress">
+      <div id="completed"></div>
+      <div id="average"></div>
+      <div id="percentage-container">
+        <span id="percentage"></span>
+      </div>
+    </div>
+  </article>
+  <script>
+    var baby = {{ site.baby | jsonify }}
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
