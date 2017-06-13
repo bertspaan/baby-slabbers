@@ -12,21 +12,43 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
+  overflow: hidden;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-family: 'open sans';
+  font-family: monospace;
+  font-size: 20px;
 
-  background: #FF8008;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /*background: linear-gradient(to right, rgb(127, 140, 131), rgb(201, 190, 162));*/
+  background: linear-gradient(to right, #e96443, #904e95);
 }
 
-article {
-  width: 800px;
-  max-width: 90%
+section {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+#loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background: linear-gradient(45deg, #ff5f6d, #ffc371);
 }
 
 h1 {
@@ -34,7 +56,8 @@ h1 {
 }
 
 #progress {
-  width: 100%;
+  width: 800px;
+  max-width: 90%;
   height: 2em;
   position: relative;
   background: white;
@@ -79,13 +102,85 @@ h1 {
 }
 
 #completed {
-  background: #38f932;
+  background: #03abff;
   background-image: url('../img/diagonal.svg');
   background-repeat: repeat;
+  background-size: auto 100%;
   animation: progress-bar 1s infinite;
   animation-timing-function: linear;
-
-  /*background-size: 100% 100%;*/
-
 }
+
+#born {
+  display: none;
+  overflow: auto;
+}
+
+#born ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  #born ul {
+    flex-direction: column;
+  }
+}
+
+#born ul ul {
+  flex-direction: column;
+}
+
+#born ul li {
+  border-style: solid;
+  border-width: 30px 30px 30px 30px;
+  border-image: url(../img/frame1.png) 90 90 90 90 stretch;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+
+  display: block;
+  margin: 50px;
+
+  width: 300px;
+  transition: transform 0.5s;
+  transform-origin: center 10%;
+}
+
+#born ul li div {
+  background-color: white;
+  padding: 10px;
+}
+
+#frame-photo {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+#frame-photo:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 150%;
+}
+
+#curtains {
+  overflow: hidden;
+}
+
+#curtains > * {
+  position: absolute;
+  top: 0;
+  height: 200vh;
+  width: 200vw;
+
+  background-color: red;
+}
+
+/*tr:nth-child(odd)*/
+
+
 

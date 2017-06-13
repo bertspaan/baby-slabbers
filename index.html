@@ -10,21 +10,68 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/moment.min.js"></script>
+  <script src="js/nl.js"></script>
   <script src="js/d3.v4.min.js"></script>
 </head>
 <body>
-  <article>
-    <h1>Baby loading…<h1>
+  <section id="loading">
+    <h1>Baby loading…</h1>
     <div id="progress">
       <div id="completed"></div>
       <div id="average"></div>
       <div id="percentage-container">
-        <span id="percentage"></span>
+        <span id="percentage">0%</span>
       </div>
     </div>
-  </article>
+    <h2 id="not-yet-born" class="invisible">Nog even geduld…</h2>
+  </section>
+  <section id="born">
+    <h1>{{ site.baby.naam }}</h1>
+    <ul id="frames">
+      <li id="frame-photo"></li>
+      <ul>
+        <li id="frame-data">
+          <div>
+            Geboren op <span id="frame-data-date"></span>: <strong id="frame-data-name"></strong>
+          </div>
+        </li>
+        <li id="frame-phone">
+          <div>
+            Laat me weten als je langs wilt komen! <br />
+            <a href="tel:00310641274925">06-41274925</a>
+          </div>
+        </li>
+      </ul>
+      <li id="frame-guestbook">
+        <div></div>
+      </li>
+    </ul>
+    <div id="curtains">
+      <div></div>
+      <div></div>
+    </div>
+  </section>
   <script>
-    var baby = {{ site.baby | jsonify }}
+    moment.locale('nl')
+
+    function parseQueryString (query) {
+      var vars = query.split('&')
+      var queryString = {}
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=')
+
+        if (pair.length === 2) {
+          queryString[pair[0]] = decodeURIComponent(pair[1])
+        }
+      }
+      return queryString
+    }
+
+    var queryString = window.location.search.substring(1)
+    var queryParameters = parseQueryString(queryString)
+
+    var configBaby = {{ site.baby | jsonify }}
+    var baby = Object.assign({}, configBaby, queryParameters)
   </script>
   <script src="js/script.js"></script>
 </body>
