@@ -55,6 +55,10 @@ h1 {
   text-align: center;
 }
 
+#baby-loading {
+  width: 400px;
+}
+
 #progress {
   width: 800px;
   max-width: 90%;
