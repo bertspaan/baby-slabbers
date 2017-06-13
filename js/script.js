@@ -1,4 +1,4 @@
-var progressBarDuration = 1000
+var progressBarDuration = 10000
 
 var dateDueStr = baby.uitgerekend
 var dateBornStr = baby.geboren
