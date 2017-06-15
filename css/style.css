@@ -23,6 +23,8 @@ body {
 
   /*background: linear-gradient(to right, rgb(127, 140, 131), rgb(201, 190, 162));*/
   background: linear-gradient(to right, #e96443, #904e95);
+
+  color: #3a2b2a;
 }
 
 section {
@@ -48,7 +50,7 @@ section {
   justify-content: center;
   overflow: hidden;
 
-  background: linear-gradient(45deg, #ff5f6d, #ffc371);
+  background: linear-gradient(45deg, #e3a76d, #f6ddc5);
 }
 
 h1 {
@@ -56,7 +58,9 @@ h1 {
 }
 
 #baby-loading {
-  width: 400px;
+  width: 350px;
+  max-width: 90%;
+  padding: 1em;
 }
 
 #progress {
@@ -106,7 +110,7 @@ h1 {
 }
 
 #completed {
-  background: #03abff;
+  background: #6fd0de;
   background-image: url('../img/diagonal.svg');
   background-repeat: repeat;
   background-size: auto 100%;
