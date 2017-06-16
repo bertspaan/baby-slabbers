@@ -50,7 +50,11 @@ section {
   justify-content: center;
   overflow: hidden;
 
-  background: linear-gradient(45deg, #e3a76d, #f6ddc5);
+  background: linear-gradient(45deg, #eaf2f3, #c8cbd0);
+}
+
+#loading > * {
+  margin: .5em;
 }
 
 h1 {
@@ -60,7 +64,6 @@ h1 {
 #baby-loading {
   width: 350px;
   max-width: 90%;
-  padding: 1em;
 }
 
 #progress {
@@ -97,6 +100,10 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#percentage {
+  text-shadow: 0 0 2px #fff;
 }
 
 @keyframes progress-bar {
