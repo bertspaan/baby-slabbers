@@ -50,7 +50,7 @@ section {
   justify-content: center;
   overflow: hidden;
 
-  background: linear-gradient(45deg, #eaf2f3, #c8cbd0);
+  background: linear-gradient(45deg, #faf2f3, #f8fbf6);
 }
 
 #loading > * {
