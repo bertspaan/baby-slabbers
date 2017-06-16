@@ -20,10 +20,6 @@ body {
 
   font-family: monospace;
   font-size: 20px;
-
-  /*background: linear-gradient(to right, rgb(127, 140, 131), rgb(201, 190, 162));*/
-  background: linear-gradient(to right, #e96443, #904e95);
-
   color: #3a2b2a;
 }
 
@@ -51,6 +47,9 @@ section {
   overflow: hidden;
 
   background: linear-gradient(45deg, #faf2f3, #f8fbf6);
+  /*background-image: url('../img/stipjes.png');*/
+  /*background-size: 10px 10px;*/
+  /*background-repeat: repeat;*/
 }
 
 #loading > * {
@@ -63,11 +62,11 @@ h1 {
 
 #baby-loading {
   width: 350px;
-  max-width: 90%;
+  max-width: 75%;
 }
 
 #charlene {
-  max-width: 90%;
+  max-width: 75%;
 }
 
 #progress {
