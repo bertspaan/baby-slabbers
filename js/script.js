@@ -55,14 +55,20 @@ function checkBaby () {
   if (baby.naam && baby.geboren) {
     born()
   } else {
+    d3.select('#not-yet-born')
+      .style('opacity', 0)
+      .style('visibility', 'visible')
+      .transition()
+      .duration(1000)
+      .delay(1000)
+      .style('opacity', 1)
 
-    // // <p id="not-yet-born" class="invisible">Nog even geduld…</p>
-    // d3.select('#not-yet-born')
-    //   .style('opacity', 0)
-    //   .style('visibility', 'visible')
-    //   .transition()
-    //   .duration(1000)
-    //   .style('opacity', 1)
+    d3.select('#percentage')
+      .style('opacity', 1)
+      .transition()
+      .duration(1000)
+      .delay(1000)
+      .style('opacity', 0)
   }
 }
 
