@@ -24,6 +24,8 @@ body {
 }
 
 section {
+  left: 0;
+  top: 0;
   position: absolute;
   margin: 0;
   padding: 0;
@@ -199,6 +201,12 @@ h1 {
 }
 
 /*tr:nth-child(odd)*/
-
-
+/*
+Red (web color) (Hex: #FF0000) (RGB: 255, 0, 0)
+Orange (color wheel Orange) (Hex: #FF7F00) (RGB: 255, 127, 0)
+Yellow (web color) (Hex: #FFFF00) (RGB: 255, 255, 0)
+Green (X11) (Electric Green) (HTML/CSS “Lime”) (Color wheel green) (Hex: #00FF00) (RGB: 0, 255, 0)
+Blue (web color) (Hex: #0000FF) (RGB: 0, 0, 255)
+Indigo (Electric Indigo) (Hex: #4B0082) (RGB: 75, 0, 130)
+Violet (Electric Violet) (Hex: #8B00FF) (RGB: 139, 0, 255)*/
 
