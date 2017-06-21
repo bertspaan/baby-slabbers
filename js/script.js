@@ -89,10 +89,24 @@ function showFrames () {
   d3.select('#frame-data-date')
     .html(date)
 
+  if (baby.foto) {
+    d3.select('#frame-photo')
+    .style('background-image', 'url(' + baby.foto + ')')
+  } else {
+    d3.select('#frame-photo').remove()
+  }
+
   d3.select('#frame-data-name')
     .html(baby.naam)
 
-  d3.select('#born').style('display', 'block')
+  d3.select('#born')
+    .style('display', 'block')
+    .style('opacity', '0')
+
+  d3.select('#born')
+    .transition()
+    .duration(1000)
+    .style('opacity', '1')
 
   setTimeout(function () {
     d3.selectAll('#born li')
