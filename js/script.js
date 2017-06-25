@@ -80,11 +80,56 @@ function born () {
     .style('opacity', '0')
     .on('end', function () {
       d3.select(this).remove()
+      lowerCurtains()
+    })
+}
+
+function lowerCurtains () {
+  d3.select('#curtains')
+    .style('display', 'block')
+    .style('top', '-100%')
+    .transition()
+    .delay(1000)
+    .duration(2000)
+    .style('top', '0%')
+    .on('end', function () {
       showFrames()
     })
 }
 
+function openCurtains () {
+  d3.select('#curtain-left-back')
+    .transition()
+    .delay(1000)
+    .duration(2000)
+    .style('left', '-100%')
+
+  d3.select('#curtain-right-back')
+    .transition()
+    .delay(1000)
+    .duration(2000)
+    .style('right', '-100%')
+
+  d3.select('#curtain-left-front')
+    .transition()
+    .delay(2000)
+    .duration(2000)
+    .style('left', '-100%')
+
+  d3.select('#curtain-right-front')
+    .transition()
+    .delay(2000)
+    .duration(2000)
+    .style('right', '-100%')
+    .on('end', function () {
+      d3.select('#curtains').remove()
+    })
+}
+
 function showFrames () {
+
+
+
   var date = moment().format('DD MMMM YYYY')
   d3.select('#frame-data-date')
     .html(date)
@@ -108,6 +153,8 @@ function showFrames () {
     .duration(1000)
     .style('opacity', '1')
 
+  openCurtains()
+
   setTimeout(function () {
     d3.selectAll('#born li')
     .each(function () {
@@ -117,11 +164,6 @@ function showFrames () {
       d3.select(this)
         .style('transform-origin', x + '% 20px')
         .style('transform', 'rotate(' + deg * sign + 'deg)')
-
-      // transform-origin: left 2px;
-      // background-image: url(../img/kuiken.jpg);
-       // d3.selectAll('#born li')
-       // .style('transform', 'rotate(' + (Math.floor(Math.random() * 3) + 2) + ')deg')
     })
   }, 100)
 }
