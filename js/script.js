@@ -127,9 +127,6 @@ function openCurtains () {
 }
 
 function showFrames () {
-
-
-
   var date = moment().format('DD MMMM YYYY')
   d3.select('#frame-data-date')
     .html(date)
@@ -154,6 +151,28 @@ function showFrames () {
     .style('opacity', '1')
 
   openCurtains()
+
+  d3.select('#guestbook')
+    .on('click', function () {
+      d3.select('#guestbook')
+        .transition()
+        .duration(1000)
+        .style('opacity', '0')
+        .on('end', function () {
+          d3.select('#guestbook')
+            .style('display', 'none')
+        })
+    })
+
+  d3.select('#open-guestbook')
+    .on('click', function () {
+      d3.select('#guestbook')
+        .style('display', 'block')
+        .style('opacity', '0')
+        .transition()
+        .duration(1000)
+        .style('opacity', '1')
+    })
 
   setTimeout(function () {
     d3.selectAll('#born li')

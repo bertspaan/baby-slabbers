@@ -121,7 +121,7 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  min-height: 300px;
 }
 
 #loading > * {
@@ -145,6 +145,7 @@ h1 {
   width: 800px;
   max-width: 90%;
   height: 2em;
+  flex-shrink: 0;
   position: relative;
   background: white;
 
@@ -209,7 +210,7 @@ h1 {
   overflow: auto;
 }
 
-#born ul {
+ul.frames {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -228,7 +229,7 @@ h1 {
   flex-direction: column;
 }
 
-#born ul li {
+ul.frames li {
   border-style: solid;
   border-width: 16px;
   border-image: url(../img/frame1.png) 90 90 90 90 stretch;
@@ -245,8 +246,17 @@ h1 {
   transform-origin: center 10%;
 }
 
+ul.frames li div {
+  background-color: white;
+  padding: 10px;
+
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 @media (max-width: 500px) {
-  #born ul li {
+  ul.frames li {
     margin: 20px 0;
   }
 }
@@ -256,11 +266,6 @@ h1 {
   max-width: 75%;
   display: block;
   margin: 2em auto;
-}
-
-#born ul li div {
-  background-color: white;
-  padding: 10px;
 }
 
 #frame-photo {
@@ -331,4 +336,26 @@ h1 {
 
 #guestbook {
   display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#guestbook ul.frames {
+  /*overflow: hidden;*/
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+
+#frame-guestbook {
+  overflow: hidden;
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  width: 600px;
+  height: 800px;
+}
+
+#disqus_thread {
+  overflow: auto;
 }
