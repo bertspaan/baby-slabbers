@@ -127,7 +127,7 @@ function openCurtains () {
 }
 
 function showFrames () {
-  var date = moment().format('DD MMMM YYYY')
+  var date = moment(dateBorn).format('DD MMMM YYYY')
   d3.select('#frame-data-date')
     .html(date)
 
@@ -140,6 +140,9 @@ function showFrames () {
 
   d3.select('#frame-data-name')
     .html(baby.naam)
+
+  d3.select('#frame-data-weight')
+    .html(baby.gewicht)
 
   d3.select('#born')
     .style('display', 'block')

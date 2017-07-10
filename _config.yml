@@ -15,15 +15,15 @@ baby:
   # (Alleen als alle velden zijn ingevuld wordt de website aangepast.)
 
   # Datum dat baby'tje is geboren:
-  geboren:
+  geboren: 2017/07/10
 
   # Naam (bv. Berry):
-  naam:
+  naam: Job Slabbers
 
   # Gewicht (bv. 3410 gram):
-  gewicht:
+  gewicht: 3366 gram
 
-  foto:
+  foto: img/job.jpg
 
   # 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶
   # 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶 👶
